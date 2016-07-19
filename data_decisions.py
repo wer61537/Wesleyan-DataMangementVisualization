@@ -57,6 +57,111 @@ usage.loc[usage['WeekInYear'] ==5, 'SequentialIntervalInWeek'] = usage['Sequenti
 #export to verify
 #usage.to_csv("c:/temp/data_decisions.csv")
 
+print("Frequency distribution of DayInYear.")                              
+usage['DayInYear'].value_counts()
+
+print("Normalized frequency distribution of DayInYear.")                              
+usage['DayInYear'].value_counts( normalize=True)
+
+plt.xlabel('DayInYear')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ DayInYear$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['DayInYear'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['DayInYear'],  facecolor='green', alpha=0.75)
+plt.show()
+
+
+print("Frequency distribution of DayInWeek.")                              
+usage['DayInWeek'].value_counts()
+
+print("Normalized frequency distribution of DayInWeek.")                              
+usage['DayInWeek'].value_counts( normalize=True)
+
+plt.xlabel('DayInWeek')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ DayInWeek$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['DayInWeek'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['DayInWeek'],  facecolor='green', alpha=0.75)
+plt.show()
+
+
+print("Frequency distribution of WeekInYear.")                              
+usage['WeekInYear'].value_counts()
+
+print("Normalized frequency distribution of WeekInYear.")                              
+usage['WeekInYear'].value_counts( normalize=True)
+
+plt.xlabel('WeekInYear')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ WeekInYear$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['WeekInYear'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['WeekInYear'],  facecolor='green', alpha=0.75)
+plt.show()
+
+
+print("Frequency distribution of air_temp_f.")                              
+usage['air_temp_f'].value_counts()
+
+print("Normalized frequency distribution of air_temp_f.")                              
+usage['air_temp_f'].value_counts( normalize=True)
+
+plt.xlabel('air_temp_f')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ air_temp_f$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['air_temp_f'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['air_temp_f'],  facecolor='green', alpha=0.75)
+plt.show()
+
+print("Frequency distribution of dew_pt_f.")                              
+usage['dew_pt_f'].value_counts()
+
+print("Normalized frequency distribution of dew_pt_f.")                              
+usage['dew_pt_f'].value_counts( normalize=True)
+
+plt.xlabel('dew_pt_f')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ dew_pt_f$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['dew_pt_f'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['dew_pt_f'],  facecolor='green', alpha=0.75)
+plt.show()
+
+
+print("Frequency distribution of SequentialIntervalInDay.")                              
+usage['SequentialIntervalInDay'].value_counts()
+
+print("Normalized frequency distribution of SequentialIntervalInDay.")                              
+usage['SequentialIntervalInDay'].value_counts( normalize=True)
+#histogram of usage, errors due to "too many values to unpack"
+plt.xlabel('SequentialIntervalInDay')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ SequentialIntervalInDay$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['SequentialIntervalInDay'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['SequentialIntervalInDay'],  facecolor='green', alpha=0.75)
+plt.show()
+
+
+
+
+print("Frequency distribution of SequentialIntervalInWeek.")                              
+usage['SequentialIntervalInWeek'].value_counts()
+
+print("Normalized frequency distribution of SequentialIntervalInWeek.")                              
+usage['SequentialIntervalInWeek'].value_counts( normalize=True)
+
+#histogram of usage
+plt.xlabel('SequentialIntervalInWeek')
+plt.ylabel('Frequency') 
+plt.title(r'$Histogram\ of\ SequentialIntervalInWeek$')
+plt.grid(True)
+n, bins, patches = plt.hist(usage['SequentialIntervalInWeek'], 50, normed=1, facecolor='green', alpha=0.75)
+n,  patches = plt.hist(usage['SequentialIntervalInWeek'],  facecolor='green', alpha=0.75)
+plt.show()
 
 #try a few plots
 usage.plot(x='SequentialIntervalInDay', y='Consumption Value')
